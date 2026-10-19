@@ -43,6 +43,7 @@ Before writing anything, collect:
 5. **Target market** — US/international (English), LATAM/Spain (Spanish), or both
 6. **Target roles** — what kind of positions they're applying for
 7. **Page preference** — 1 page (junior/mid), 2 pages (6+ years senior), or flexible
+8. **Output format** — ask: "Do you want a PDF version along with the .docx?" Ask only when a resume file will be produced (not for reviews or feedback). If the answer is unclear, default to .docx only
 
 **CRITICAL: Ask about domain context for each role.** The difference between "developed web applications" and "developed fintech credit management systems handling card issuance, payment links, and transaction processing" is the difference between a generic and a compelling resume. Always ask:
 - What industry/domain was this? (fintech, legaltech, healthcare, logistics, security, etc.)
@@ -87,11 +88,15 @@ Read `references/format-and-structure.md` for the complete guide. Use the `docx`
 - **Margins:** 0.75 inches all sides
 - **Line spacing:** 13pt
 - **Format:** Single column, no tables for layout, no graphics
-- **File format:** .docx (for editing) AND .pdf (for sending/uploading)
+- **File format:** .docx. Add .pdf only if the user said yes in Step 1
 
-### Step 5: Convert to PDF (MANDATORY)
+### Step 5: Convert to PDF (ONLY IF REQUESTED)
 
-**Always deliver both .docx and .pdf versions.** The .docx is for future editing; the .pdf is for sending to employers.
+**Skip this step entirely unless the user asked for a PDF.**
+
+**When a PDF was requested, deliver both versions.** The .docx is for future editing; the .pdf is for sending to employers.
+
+If the conversion tools (`soffice`, `pdftotext`, `pdfinfo`) are not installed, tell the user and offer either the install commands (`brew install --cask libreoffice`, `brew install poppler`) or exporting from Word via File → Save As → PDF.
 
 PDF conversion rules:
 - Convert using LibreOffice: `python scripts/office/soffice.py --headless --convert-to pdf resume.docx`
@@ -157,8 +162,9 @@ Run this checklist against every resume before delivering:
 - [ ] No internal company jargon or project names only insiders would understand
 
 **Delivery:**
-- [ ] PDF version generated from final .docx
-- [ ] PDF is text-based (verified with pdftotext — text is extractable)
-- [ ] PDF page count matches expectations
+- [ ] .docx delivered to user
 - [ ] All hyperlinks work and point to professional pages
-- [ ] Both .docx and .pdf delivered to user
+- [ ] PDF version generated from final .docx *(only if PDF requested)*
+- [ ] PDF is text-based (verified with pdftotext — text is extractable) *(only if PDF requested)*
+- [ ] PDF page count matches expectations *(only if PDF requested)*
+- [ ] Both .docx and .pdf delivered to user *(only if PDF requested)*

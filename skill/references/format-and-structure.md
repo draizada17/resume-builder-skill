@@ -188,7 +188,9 @@ These ensure your resume is correctly parsed by Applicant Tracking Systems:
 
 ## PDF Conversion & Delivery
 
-### Always Deliver Both Formats
+**Use this section only if the user asked for a PDF version.** Otherwise deliver the .docx only.
+
+### Formats When a PDF Is Requested
 - **.docx** — for future editing by the user
 - **.pdf** — for sending to employers, uploading to job portals, and sharing
 
@@ -211,7 +213,7 @@ pdfinfo resume.pdf
 4. **Visual fidelity:** PDF should look identical to Word — same fonts, spacing, alignment
 5. **File size:** A 2-page text-based resume PDF should be under 200KB
 
-### Why PDF Is the Preferred Delivery Format
+### Why Someone Might Want a PDF
 - **Format preservation:** .docx renders differently on different OS/Word versions/fonts. PDF is identical everywhere.
 - **ATS compatibility:** All modern ATS parse text-based PDFs correctly. The "ATS can't read PDFs" myth is outdated.
 - **Professionalism:** PDF is the standard for business documents. .docx suggests a draft.
